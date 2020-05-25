@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.instatry.Maps.Main2Activity;
 
 public class Place extends AppCompatActivity {
 
@@ -49,5 +50,21 @@ public class Place extends AppCompatActivity {
         Toast.makeText(this, "Maps" + latitude + longitude, Toast.LENGTH_SHORT).show();
         // Go to Maps Activity (use intent or whatever)
         // use variables latitude and longitude variables
+
+        Intent intent = new Intent(Place.this, Main2Activity.class);
+        double d1=Double.parseDouble(latitude);
+        double d2=Double.parseDouble(longitude);
+
+//        double d1=13.3525;
+//        double d2=74.7928;
+        String s1=String.valueOf(d1);
+        String s2=String.valueOf(d2);
+        intent.putExtra("coor1",s1);
+        intent.putExtra("coor2",s2);
+        startActivity(intent);
+
+
+
+
     }
 }
