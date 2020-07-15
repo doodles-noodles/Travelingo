@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cordinate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:outlineSpotShadowColor="#000">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFF"
+            android:stateListAnimator="@animator/appbar_always_elevated"
+            app:liftOnScroll="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:outlineAmbientShadowColor="@color/mainColor"
+                app:navigationIcon="@drawable/ic_beach_access_black_24dp"
+                app:title="@string/app_title"
+                app:titleMarginStart="70dp"
+                app:titleTextAppearance="@style/titlebar"
+                app:titleTextColor="@color/mainColor" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="70dp"
+                android:text="How can we help you?"
+                android:textAppearance="@style/Welcome_title" />
+
+            <TextView
+                android:id="@+id/itsyour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="2dp"
+                android:text="It's your"
+                android:textAppearance="@style/Welcome_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/itsyour"
+                android:text="call."
+                android:textAppearance="@style/Welcome_title"
+                android:textColor="#003152" />
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandable_view_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="180dp"
+            android:layout_marginBottom="60dp" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
